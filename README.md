@@ -1,4 +1,4 @@
-# Linear Clone
+# Next Issue Tracker
 
 A project management application built with Next.js, inspired by Linear.
 
@@ -30,8 +30,8 @@ A project management application built with Next.js, inspired by Linear.
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/henghaopu/linear-next.git
-   cd linear-next
+   git clone https://github.com/henghaopu/next-issue-tracker.git
+   cd next-issue-tracker
    ```
 
 2. Install dependencies
