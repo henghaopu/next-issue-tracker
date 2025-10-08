@@ -91,7 +91,8 @@ export async function shouldRefreshToken(token: string): Promise<boolean> {
   }
 }
 
-// Create a session using JWT
+// createSession 函數實際上並沒有使用傳統的 session 機制，而是使用 JWT (JSON Web Token) 來實現身份驗證
+// issueAccessToken (簽發訪問令牌) is a more accurate description
 export async function createSession(userId: string) {
   try {
     // Create JWT with user data
@@ -100,7 +101,7 @@ export async function createSession(userId: string) {
     // Store JWT in a cookie
     const cookieStore = await cookies()
     cookieStore.set({
-      name: 'auth_token',
+      name: 'auth_token', // access_token
       value: token,
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
